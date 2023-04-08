@@ -12,11 +12,11 @@
     <div class="container d-flex flex-column bg-dark">
         <h1 class="mb-5 text-light text-center">TODO WEB APP</h1>
         @foreach ($dbdatas as $data)
-        <div class="d-flex flex-column justify-content-between align-items-center">
+        <div class="todos-wrapper d-flex flex-column justify-content-between align-items-center w-100">
             <li>
-                <p class="text-capitalize bg-dark text-light text-start ps-2">{{$data['todo']}}</p>
+                <p class="text-capitalize bg-secondary text-light text-start p-2 ">{{$data['todo']}}</p>
                 <button class="btn btn-success edit-trigger" id="trigger"><a class="text-light" href="edit-todo/{{$data['id']}}">Edit</a></button>
-                <button class="btn btn-danger sm"><a class="text-light" href="delete-todo/{{$data['id']}}" >Delete</a></button>
+                <button class="btn btn-danger"><a class="text-light" href="delete-todo/{{$data['id']}}" >Delete</a></button>
             </li>
         </div>
        

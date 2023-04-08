@@ -9,11 +9,11 @@
     <title>laravel frst project</title>
 </head>
 <body>
-    <div class="container w-25 h-75 mt-5  p-5 bg-light">
-        <form action="/edit-todo" class="editing-place w-100 h-100" id="editing-place" method="POST">
+    <div class="container h-75 mt-5  p-5 bg-light">
+        <form action="/edit-todo" class="editing-place " id="editing-place" method="POST">
             @csrf
             <input type="hidden" name="id" value="{{$matchedTodo['id']}}">
-            <textarea name="edited" id="textarea" class="text-capitalize bg-dark text-light text-center w-100 h-100" required>{{$matchedTodo['todo']}}</textarea>
+            <textarea name="edited" id="textarea" class="text-capitalize bg-dark text-light text-center" required>{{$matchedTodo['todo']}}</textarea>
             <button type="submit" class="btn btn-secondary w-50 p-2 mt-2">Update</button>
         </form>
     </div>
