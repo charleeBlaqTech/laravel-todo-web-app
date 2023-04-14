@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="container d-flex flex-column bg-dark">
-        <h1 class="mb-5 text-light text-center">TODO WEB APP</h1>
+        <h1 class="mb-3 text-light text-center">TODO WEB APP</h1>
+
         @foreach ($dbdatas as $data)
         <div class="todos-wrapper d-flex flex-column justify-content-between align-items-center w-100">
             <li>
@@ -24,7 +25,7 @@
 
         <form action="/" method="POST" class="d-flex flex-column justify-content-between align-items-center">
             @csrf
-            <input type="text" name="todo" id="" placeholder="Add A Todo" class="w-100 p-2 mt-3 text-center" required>
+            <input type="text" name="todo" id="" placeholder="Add A Todo" class="w-100 p-2 mt-1 text-center" required>
             <button type="submit" class="btn btn-secondary w-50 mt-2">Add</button>
         </form>
     </div>

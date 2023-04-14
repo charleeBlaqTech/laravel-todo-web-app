@@ -18,10 +18,17 @@ class TodoListController extends Controller
     }
     
     public function postTodo(Request $req){
-        $newTodo = new Todolist;
-        $newTodo->todo= $req->todo;
-        $newTodo->save();
-        return redirect('/');
+
+        $dbdatas = Todolist::all();
+        if(count($dbdatas) >= 10){
+
+            return redirect('/');
+        }else{
+            $newTodo = new Todolist;
+            $newTodo->todo= $req->todo;
+            $newTodo->save();
+            return redirect('/');
+        } 
     }
 
     public function editTodoTextArea($id){
